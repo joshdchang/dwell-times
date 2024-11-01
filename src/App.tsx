@@ -248,22 +248,22 @@ function App() {
       />
 
       <div class="flex justify-between items-start flex-col lg:flex-row gap-8">
-        <div class="flex gap-4">
+        <div class="flex gap-4 items-stretch">
           <div>
             <label class="block text-sm font-semibold text-slate-800">Year</label>
             <input
               type="number"
-              class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+              class="mt-2 block w-28 px-4 h-10 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
               value={year()}
               onInput={(e) => setYear(parseInt(e.currentTarget.value))}
             />
           </div>
-          
+
           <div>
             <label class="block text-sm font-semibold text-slate-800">Week</label>
             <input
               type="number"
-              class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+              class="mt-2 block w-28 px-4 h-10 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
               value={week()}
               onInput={(e) => setWeek(parseInt(e.currentTarget.value))}
             />
@@ -271,16 +271,34 @@ function App() {
 
           <div>
             <label class="block text-sm font-semibold text-slate-800">Railroad</label>
-            <select
-              class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-              value={""}
-              onChange={(e) => setRailroad(e.currentTarget.value as Railroad)}
-            >
-              <option value="">All</option>
-              {railroads.map((rr) => (
-                <option value={rr}>{rr}</option>
-              ))}
-            </select>
+            <div class="relative">
+              <select
+                class="mt-2 block w-28 px-3 h-10 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out appearance-none"
+                value={""}
+                onChange={(e) => setRailroad(e.currentTarget.value as Railroad)}
+              >
+                <option value="">All</option>
+                {railroads.map((rr) => (
+                  <option value={rr}>{rr}</option>
+                ))}
+              </select>
+              <div class="absolute right-3 top-0 bottom-0 flex items-center justify-center pointer-events-none">
+                <svg
+                  class="w-4 h-4 text-slate-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex flex-col gap-5 lg:items-end">
