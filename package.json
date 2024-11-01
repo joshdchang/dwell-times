@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.9.3"
+    "csvtojson": "^2.0.10",
+    "quicktype": "^23.0.170",
+    "solid-js": "^1.9.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
     "vite-plugin-solid": "^2.10.2"
