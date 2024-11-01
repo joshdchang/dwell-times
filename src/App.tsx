@@ -301,8 +301,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-5 lg:items-end">
-          <p>
+        <div class="flex flex-col gap-4 lg:items-end">
+          <p class="font-medium text-slate-800">
             Dwell times for week of{" "}
             {dateForWeek()
               ? dateForWeek()!.toLocaleDateString("en-US", {
@@ -319,7 +319,7 @@ function App() {
                   class="w-4 h-4 rounded-full"
                   style={{ "background-color": stop.color }}
                 />
-                <span class="text-slate-500">{stop.value}+ h</span>
+                <span class="text-slate-800">{stop.value}+ h</span>
               </div>
             ))}
           </div>
