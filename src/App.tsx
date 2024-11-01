@@ -250,22 +250,22 @@ function App() {
       <div class="flex justify-between items-start flex-col lg:flex-row gap-8">
         <div class="flex gap-4">
           <div>
-            <label class="block text-sm font-semibold text-slate-800">Week</label>
-            <input
-              type="number"
-              class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-              value={week()}
-              onInput={(e) => setWeek(parseInt(e.currentTarget.value))}
-            />
-          </div>
-
-          <div>
             <label class="block text-sm font-semibold text-slate-800">Year</label>
             <input
               type="number"
               class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
               value={year()}
               onInput={(e) => setYear(parseInt(e.currentTarget.value))}
+            />
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold text-slate-800">Week</label>
+            <input
+              type="number"
+              class="mt-2 block w-28 px-4 py-2 text-slate-700 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring focus:ring-sky-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+              value={week()}
+              onInput={(e) => setWeek(parseInt(e.currentTarget.value))}
             />
           </div>
 
