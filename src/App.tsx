@@ -303,7 +303,7 @@ function App() {
         </div>
         <div class="flex flex-col gap-4 lg:items-end">
           <p class="font-medium text-slate-800">
-            Dwell times for week of{" "}
+            Dwell times for week ending{" "}
             {dateForWeek()
               ? dateForWeek()!.toLocaleDateString("en-US", {
                   month: "long",
